@@ -27,3 +27,51 @@
    Attach the ENI to one of the EC2 Instance
    Shutdown the one with ENI
    Detach ENI from the stopped EC2 and associate it with the one which in running state
+   
+   6a. Create an EC2 instance
+   Create a secret key
+   Use aws configure to apply the key
+   execute following commands
+
+
+ssh -i "XXXX.pem" YYYYYYY.compute-1.amazonaws.com
+
+         aws s3 ls
+         aws s3 ls s3://yourbucketname
+
+         clear
+
+         cd ~/.aws
+         ls -ltr
+         cat config
+         cat credentials
+         rm -rf credentials
+ 
+  Try accessing aws s3 ls and this would not work
+
+6b. Create a role and attache S3Readonly policy to the role
+    Attach the new role to EC2 instance and then try to execute following command
+    aws s3 ls
+
+7. Create an instance profile from command line, this would not work as aws cli is not configured.
+   Execute aws configure
+   Enter AccessID and Secret key
+   Now execute following command to create instance profile and add a role to it
+   # Create instance profile
+      aws iam create-instance-profile --instance-profile-name mytestinstanceprofile
+   # Add role to instance profile
+      aws iam add-role-to-instance-profile --role-name S3ReadOnly --instance-profile-name mytestinstanceprofile
+   
+   Once done use the command to delete the role from instance profile and also delete instance profile
+   # Remove role from instance profile
+      aws iam remove-role-from-instance-profile --role-name S3ReadOnly --instance-profile-name mytestinstanceprofile
+   # Delete instance profile
+      aws iam delete-instance-profile --instance-profile-name mytestinstanceprofile
+      
+      
+   
+
+
+
+
+
