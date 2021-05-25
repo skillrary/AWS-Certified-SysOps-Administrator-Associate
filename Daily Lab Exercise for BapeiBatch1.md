@@ -57,9 +57,9 @@ ssh -i "XXXX.pem" YYYYYYY.compute-1.amazonaws.com
    Execute aws configure
    Enter AccessID and Secret key
    Now execute following command to create instance profile and add a role to it
-   # Create instance profile
+   ###### Create instance profile
       aws iam create-instance-profile --instance-profile-name mytestinstanceprofile
-   # Add role to instance profile
+   ###### Add role to instance profile
       aws iam add-role-to-instance-profile --role-name S3ReadOnly --instance-profile-name mytestinstanceprofile
    
    Once done use the command to delete the role from instance profile and also delete instance profile
