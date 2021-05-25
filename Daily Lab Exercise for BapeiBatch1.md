@@ -8,7 +8,7 @@
 
 5. Create EC2 Instance with Shutdown as Terminate. Try to terminate the instance from Management Console, Login to EC2 instance from command prompt and execute shutdown command as root. Test the behaviour. 
 
-## Commands Used
+### Commands Used
 1. sudo su - -->Change the user to root
 2. shutdown --> use this command to shutdown from server
 
