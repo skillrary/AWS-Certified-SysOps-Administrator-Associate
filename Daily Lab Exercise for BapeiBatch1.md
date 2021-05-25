@@ -63,9 +63,9 @@ ssh -i "XXXX.pem" YYYYYYY.compute-1.amazonaws.com
       aws iam add-role-to-instance-profile --role-name S3ReadOnly --instance-profile-name mytestinstanceprofile
    
    Once done use the command to delete the role from instance profile and also delete instance profile
-   # Remove role from instance profile
+   ###### Remove role from instance profile
       aws iam remove-role-from-instance-profile --role-name S3ReadOnly --instance-profile-name mytestinstanceprofile
-   # Delete instance profile
+   ###### Delete instance profile
       aws iam delete-instance-profile --instance-profile-name mytestinstanceprofile
       
       
