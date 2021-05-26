@@ -28,13 +28,13 @@
    Shutdown the one with ENI
    Detach ENI from the stopped EC2 and associate it with the one which in running state
    
-   6a. Create an EC2 instance
+6a. Create an EC2 instance
    Create a secret key
    Use aws configure to apply the key
    execute following commands
 
 
-ssh -i "XXXX.pem" YYYYYYY.compute-1.amazonaws.com
+         ssh -i "XXXX.pem" YYYYYYY.compute-1.amazonaws.com
 
          aws s3 ls
          aws s3 ls s3://yourbucketname
