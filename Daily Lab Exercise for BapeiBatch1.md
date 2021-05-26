@@ -141,19 +141,19 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
     7  ls -ltr
     8  cat config
     9  cat credentials
-      10  ls -ltr
-      11  rm -rf credentials
-      12  ls -ltr
-      13  aws s3 ls
-      14  aws s3 ls
-      15  exit
-      16  free -m | awk 'NR==2{printf "%.2f\t", $3*100/$2 }'
-      17  free -m
-      18  free -m | awk 'NR==2{printf "%.2f\t", $3*100/$2 }'
-      19  exit
-      20  ls -ltr
-      21  ./mem.sh
-      22  crontab -e
-      23  crontab -l
+    10  ls -ltr
+    11  rm -rf credentials
+    12  ls -ltr
+    13  aws s3 ls
+    14  aws s3 ls
+    15  exit
+    16  free -m | awk 'NR==2{printf "%.2f\t", $3*100/$2 }'
+    17  free -m
+    18  free -m | awk 'NR==2{printf "%.2f\t", $3*100/$2 }'
+    19  exit
+    20  ls -ltr
+    21  ./mem.sh
+    22  crontab -e
+    23  crontab -l
 
 
