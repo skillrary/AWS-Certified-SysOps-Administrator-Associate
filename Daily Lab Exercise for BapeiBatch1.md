@@ -47,11 +47,11 @@
          cat credentials
          rm -rf credentials
  
-  Try accessing aws s3 ls and this would not work
+   Try accessing aws s3 ls and this would not work
 
 6b. Create a role and attache S3Readonly policy to the role
     Attach the new role to EC2 instance and then try to execute following command
-    aws s3 ls
+        aws s3 ls
 
 7. Create an instance profile from command line, this would not work as aws cli is not configured.
    Execute aws configure
