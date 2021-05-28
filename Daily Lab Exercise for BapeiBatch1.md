@@ -231,4 +231,36 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    1. Get to ELB attributes and enable sticky session
 
 
+## Exercise 4: Create ASG
+
+   1. Create a new ASG under Autoscaling Group Console
+      a. Give it a name
+      b. Click on Create a launch template, as we do not have a launch template. 
+      c. Enter all the details for Launch Template like Name, AMI, Instance Type, Select Key Pair, Security Group, Role with S3 access, and in advance details add User data details with the link below. 
+   https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/user-data-to-create-index-html-with-names.sh 
+      d. Once launch template is created, go back to step 1 to create a ASG
+      e. Adhere to launch template, choose subnets
+      f. Application Load Balancer select the right template group
+      g. Configure group size and scaling polices add desired, minimum and maximum capacity
+      h. Review the configuration and create ASG. 
+
+   This will launch the instaces in EC2. 
+
+## Exercise 5: Add scaling policy and cause scaling events
+
+   1. Goto ASG console
+   2. Click on the ASG created earlier
+   3. Goto Automatic Scaling and choose Dynamic Scaling and create a Scaling policy
+   4. Select Policy type as Target tracking scaling, Average CPU to 50 and create the policy
+   5. Go back to details of ASG and increase the maximum capacity for ASG to alteast 6
+
+   6. Terminate one of the EC2 instances, this should create a new instance
+   7. Monitor Activity under ASG created and Target Group to see new instance is added to target group as well
+   8. Generate load on each EC2 instance by getting inside the instance and executing the commands for stressing the servers with the link below,
+   https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/generate-load-on-asg.sh
+
+   Monitor the systems to see more instances created.
+
+   Make sure you delete all the instance and configurations created till now. 
+
 
