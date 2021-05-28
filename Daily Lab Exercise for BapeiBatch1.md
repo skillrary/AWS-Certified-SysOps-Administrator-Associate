@@ -176,3 +176,59 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    2. Create an SNS topic and configure the target or subscriber. Use the Lambda function created above
    3. Check if Lamdba function has the trigger from step 2. 
    4. On the Lambda console go to Monitoring for the Lambda function created. Click on Monitor logs in Cloudwatch. Check if the published message is available in Cloudwatch logs
+
+
+
+# Day 4:
+
+## Exercise 1: Create an Application Load Balancer (ALB)
+
+   1. Create an S3 bucket and upload all the files from the link below,
+   https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/tree/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/Website
+   2. Create 2 ec2 instnace in differnt subnet and all the following user data,
+
+   #!/bin/bash
+   yum update -y
+   yum install httpd -y
+   systemctl start httpd
+   systemctl enable httpd
+   cd /var/www/html
+   aws s3 cp s3://skillrary-lab-bapei-elb/names.csv ./
+   aws s3 cp s3://skillrary-lab-bapei-elb/index.txt ./
+   EC2NAME=`cat ./names.csv|sort -R|head -n 1|xargs`
+   sed "s/INSTANCEID/$EC2NAME/" index.txt > index.html
+
+   make sure you assign S3Readonly role to each of these instances.
+
+   3. Create a new LB configuration with a new Templage Group
+
+
+
+## Exercise 2: Enable Path based Routing
+
+   1. Create a new ec2 instance add the code below for user data section,
+
+   #!/bin/bash
+   yum update -y
+   yum install httpd -y
+   systemctl start httpd
+   systemctl enable httpd
+   cd /var/www/html
+   aws s3 cp s3://skillrary-lab-bapei-elb/names.csv ./
+   aws s3 cp s3://skillrary-lab-bapei-elb/index.txt ./
+   EC2NAME=`cat ./names.csv|sort -R|head -n 1|xargs`
+   sed "s/INSTANCEID/$EC2NAME/" index.txt > index.html
+   cp index.html orders.html
+
+   2. Create a new target group and add the ec2 instance created above
+
+   3. Go to ELB configuration and edit the listner rule
+      Add a new rule, choose path and add the necessary details and save
+
+
+## Exercise 3: Enable Sticky Sessions on ELB
+
+   1. Get to ELB attributes and enable sticky session
+
+
+
