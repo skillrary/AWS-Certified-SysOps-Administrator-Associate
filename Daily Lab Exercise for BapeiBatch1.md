@@ -179,7 +179,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
 
 
-# Day 4:
+# Day 5:
 
 ## Exercise 1: Create an Application Load Balancer (ALB)
 
