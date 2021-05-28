@@ -160,7 +160,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
 ## Exercise 1: Create and invoke a serverless Lambda function using Amazon SNS
 
-   1. Create a Lambda Function and copy the code from the link below, 
+   1. Create a Lambda Function and copy the code from the link below,  
       https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/AWS%20Lambda/write-to-cloudwatch-logs.js
    2. Create an SNS topic and configure the target or subscriber. Use the Lambda function created above
    3. Check if Lamdba function has the trigger from step 2. 
@@ -171,7 +171,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
 ## Exercise 2: Configured Lambda function to run on a scheduled event
 
-   1. Create a Lambda Function and copy the code from the link below, 
+   1. Create a Lambda Function and copy the code from the link below,  
       https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/AWS%20Lambda/scheduled-execution.js
    2. Create an SNS topic and configure the target or subscriber. Use the Lambda function created above
    3. Check if Lamdba function has the trigger from step 2. 
