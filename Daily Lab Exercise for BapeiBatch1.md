@@ -43,7 +43,7 @@ Table of contents
 3. Know where configure Dedicated host/instance
 
 
-4. Create EC2 instance, stop and start the instance and recoginze release of public IP from the instance.
+4. Create EC2 instance, stop and start the instance and recognize release of public IP from the instance.
    Create Elastic IP and associate it with EC2 instance. Stop and Start to check if IP gets released.
   
 
@@ -75,10 +75,10 @@ Table of contents
    Try accessing aws s3 ls and this would not work
 
 6b. Create a role and attache S3Readonly policy to the role
-    Attach the new role to EC2 instance and then try to execute following command
+    Attach the new role to the EC2 instance and then try to execute the following command
         aws s3 ls
 
-7. Create an instance profile from command line, this would not work as aws cli is not configured.
+7. Create an instance profile from the command line, this would not work as aws cli is not configured.
    Execute aws configure
    Enter AccessID and Secret key
    Now execute following command to create instance profile and add a role to it
@@ -101,12 +101,12 @@ Table of contents
 1. Create a VPC with the configuration as per the link(github https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/EC2/custom-vpc.txt) provided
 2. Create Ec2 instance in both Public and Private Subnet
 3. SSH to EC2 instance in Private subnet from EC2 in Public subnet (Copy PEM file to Public EC2 instance and then try to SSH)
-4. Try accessing google.com from the command prompt using ping utility
+4. Try accessing google.com from the command prompt using the ping utility
    ping google.com
    You will see that it is not accessible.
 
 5. Create a NAT gateway and map the id in the private route table
-6. Try pinging google again to test if private EC2 instance is able to access the internet
+6. Try pinging google again to test if a private EC2 instance is able to access the internet
 
 
 ## Exercise 2: Create Custom Metric
@@ -116,7 +116,7 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
 1. Created Custom Metric. Use the above link to do the same.
 2. Execute the command the following command
       aws cloudwatch put-metric-data --metric-name MyBytes --namespace MyNameSpace --unit Bytes --value 231434333 --dimensions InstanceId=1-23456789,InstanceType=m1.small
-3. Goto Cloudwatch and see if it has created a new namesapce 
+3. Goto Cloudwatch and see if it has created a new namespace 
 4. Now create a new EC2 instance and create mem.sh file with the following 2 lines.
 
   
@@ -125,13 +125,13 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
       aws cloudwatch put-metric-data --metric-name memory-usage --dimensions Instance=i-0542ea1e32c310c93  --namespace "EC2-Mem" --value $USEDMEMORY
 
 
-5. Save the file and create a crontab entry using the following commnad
+5. Save the file and create a crontab entry using the following command
       crontab -e
 6. Add the line below to crontab entry 
        */1 * * * * /home/ec2-user/mem.sh
 7. Save it and test if the entry is intact in crontab
       crontab -l
-9. Exectue steps from github url to put some load or stress the system. Execute the following commands one after the other.
+9. Exectue steps from github url to put some load or stress on the system. Execute the following commands one after the other.
 
       sudo amazon-linux-extras install epel -y
       sudo yum install stress-ng -y
@@ -140,11 +140,11 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
    Now wait for the data to be published to CloudWatch
 
 10. Verify if you see all the data in CloudWatch
-11. Create an alarm for memory utilzation and trigger an email through SNS topic
-12. In the instance standard monitoring create another alarm for CPU utilization. Also configure action to be performed. Choose to termiante the instance.
+11. Create an alarm for memory utilization and trigger an email through SNS topic
+12. In this instance standard monitoring create another alarm for CPU utilization. Also configure action to be performed. Choose to termiante the instance.
 13. Verify if the instance gets terminated
 
-## Exercise 3: Install Unified Cloudwatch Agend for EC2
+## Exercise 3: Install Unified Cloudwatch Agent for EC2
 https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/EC2/cloudwatch-agent-windows-install.sh
 
 1. Create a new Windows environment. Choose free tier windows 2019 base/ (Make sure to disable IE security from Server Management on Windows)
@@ -154,7 +154,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 4. Execute the following line from windows powershell
       & "C:\Program Files\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1" -a fetch-config -m ec2 -s -c file:"C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json"
 
-5. Go back to Cloudwatch console and wait for metrics to be shown
+5. Go back to the Cloudwatch console and wait for metrics to be shown
 
 ### Commands used: Day3
     1  aws s3 ls
@@ -225,7 +225,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
    make sure you assign S3Readonly role to each of these instances.
 
-   3. Create a new LB configuration with a new Templage Group
+   3. Create a new LB configuration with a new Template Group
 
 
 
@@ -247,8 +247,8 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
    2. Create a new target group and add the ec2 instance created above
 
-   3. Go to ELB configuration and edit the listner rule
-      Add a new rule, choose path and add the necessary details and save
+   3. Go to ELB configuration and edit the listener rule
+      Add a new rule, choose the path and add the necessary details and save
 
 
 ## Exercise 3: Enable Sticky Sessions on ELB
@@ -263,29 +263,29 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
       b. Click on Create a launch template, as we do not have a launch template. 
       c. Enter all the details for Launch Template like Name, AMI, Instance Type, Select Key Pair, Security Group, Role with S3 access, and in advance details add User data details with the link below. 
    https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/user-data-to-create-index-html-with-names.sh 
-      d. Once launch template is created, go back to step 1 to create a ASG
+      d. Once the launch template is created, go back to step 1 to create a ASG
       e. Adhere to launch template, choose subnets
       f. Application Load Balancer select the right template group
-      g. Configure group size and scaling polices add desired, minimum and maximum capacity
+      g. Configure group size and scaling policies add desired, minimum and maximum capacity
       h. Review the configuration and create ASG. 
 
-   This will launch the instaces in EC2. 
+   This will launch the instances in EC2. 
 
 ## Exercise 5: Add scaling policy and cause scaling events
 
    1. Goto ASG console
    2. Click on the ASG created earlier
-   3. Goto Automatic Scaling and choose Dynamic Scaling and create a Scaling policy
+   3. Goto Automatic Scaling and choose Dynamic Scaling and, create a Scaling policy
    4. Select Policy type as Target tracking scaling, Average CPU to 50 and create the policy
-   5. Go back to details of ASG and increase the maximum capacity for ASG to alteast 6
+   5. Go back to details of ASG and increase the maximum capacity for ASG to atleast 6
 
    6. Terminate one of the EC2 instances, this should create a new instance
-   7. Monitor Activity under ASG created and Target Group to see new instance is added to target group as well
+   7. Monitor Activity under ASG created and Target Group to see new instance is added to the target group as well
    8. Generate load on each EC2 instance by getting inside the instance and executing the commands for stressing the servers with the link below,
    https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/generate-load-on-asg.sh
 
    Monitor the systems to see more instances created.
 
-   Make sure you delete all the instance and configurations created till now. 
+   Make sure you delete all the instances and configurations created till now. 
 
 
