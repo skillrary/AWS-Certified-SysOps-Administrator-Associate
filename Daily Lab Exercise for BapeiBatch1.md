@@ -7,6 +7,28 @@ Table of contents
 - [Day4](#day-4)
 - [Day5](#day-5)
 
+- [Day1:](#day1)
+    + [Commands Used](#commands-used)
+- [Day2](#day2)
+          + [Create instance profile](#create-instance-profile)
+          + [Add role to instance profile](#add-role-to-instance-profile)
+          + [Remove role from instance profile](#remove-role-from-instance-profile)
+          + [Delete instance profile](#delete-instance-profile)
+- [Day3](#day3)
+  * [Exercise 1: Create Custom VPC and test Bastion Host and Nat Gateway](#exercise-1--create-custom-vpc-and-test-bastion-host-and-nat-gateway)
+  * [Exercise 2: Create Custom Metric](#exercise-2--create-custom-metric)
+  * [Exercise 3: Install Unified Cloudwatch Agend for EC2](#exercise-3--install-unified-cloudwatch-agend-for-ec2)
+    + [Commands used: Day3](#commands-used--day3)
+- [Day 4:](#day-4)
+  * [Exercise 1: Create and invoke a serverless Lambda function using Amazon SNS](#exercise-1--create-and-invoke-a-serverless-lambda-function-using-amazon-sns)
+  * [Exercise 2: Configured Lambda function to run on a scheduled event](#exercise-2--configured-lambda-function-to-run-on-a-scheduled-event)
+- [Day 5:](#day-5)
+  * [Exercise 1: Create an Application Load Balancer (ALB)](#exercise-1--create-an-application-load-balancer--alb)
+  * [Exercise 2: Enable Path based Routing](#exercise-2--enable-path-based-routing)
+  * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
+  * [Exercise 4: Create ASG](#exercise-4--create-asg)
+  * [Exercise 5: Add scaling policy and cause scaling events](#exercise-5--add-scaling-policy-and-cause-scaling-events)
+
 
 # Day1:
 
