@@ -21,11 +21,12 @@ Table of contents
   * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
   * [Exercise 4: Create ASG](#exercise-4--create-asg)
   * [Exercise 5: Add scaling policy and cause scaling events](#exercise-5--add-scaling-policy-and-cause-scaling-events)
-- [Day 6:](#day6)
-  * [Exercise 1: Create an Application Load Balancer (ALB)](#exercise-1--create-an-application-load-balancer--alb)
-  * [Exercise 2: Enable Path based Routing](#exercise-2--enable-path-based-routing)
-  * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
-  * [Exercise 4: Create ASG](#exercise-4--create-asg)
+- [Day 6:](#day6)   
+  * [Exercise 1: Creating and resizing Amazon EBS volumes](#exercise1-creating-and-resizing-amazon-ebs-volumes)
+  * [Exercise 2: Create a snapshot and AMI](#exercise2-create-a-snapshot-and-ami)
+  * [Exercise 3: Create an encrypted Volume and create a snapshot either encrypted or unencrypted with a custom key](#exercise3-create-an-encrypted-volume-and-create-a-snapshot-either-encrypted-or-unencrypted-with-a-custom-key)
+  * [Exercise 4: Creating and mounting EFS filesystem](#exercise4-creating-and-mounting-efs-filesystem)
+
 
 # Day1:
 
