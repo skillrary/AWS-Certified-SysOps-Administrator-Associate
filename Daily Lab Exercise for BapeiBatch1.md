@@ -21,7 +21,11 @@ Table of contents
   * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
   * [Exercise 4: Create ASG](#exercise-4--create-asg)
   * [Exercise 5: Add scaling policy and cause scaling events](#exercise-5--add-scaling-policy-and-cause-scaling-events)
-
+- [Day 6:](#day-5)
+  * [Exercise 1: Create an Application Load Balancer (ALB)](#exercise-1--create-an-application-load-balancer--alb)
+  * [Exercise 2: Enable Path based Routing](#exercise-2--enable-path-based-routing)
+  * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
+  * [Exercise 4: Create ASG](#exercise-4--create-asg)
 
 # Day1:
 
@@ -288,4 +292,49 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
    Make sure you delete all the instances and configurations created till now. 
 
+
+# Day6:
+
+## Exercise1: Creating and resizing Amazon EBS volumes
+
+   1. Launch a windows 2019 base free tier instance
+   2. Create a new volume with IO1 volume type in the same AZ of the windows instance launched in step1
+   3. Once the volume is available go ahead and attach it to the instance created in step1
+   4. Login to windows instance created in step1 and open Disk Management utility(create and format hard disk partitions)
+   5. Right click on the hardisk name and click on online, righ click again and choose initialize the disk and finally create the volume
+   6. Come back to EC2 console and choose the volume created in step2 and click on actions and choose modify volume, increase the size
+   7. Refresh the diskmanagement under the OS and you will be able to see the extra space allocated
+   8. Right Click on the disk and extend the partition
+
+
+## Exercise2: Create a snapshot and AMI
+
+   1. Shutdown the instance created in Exercise1, Step1. 
+   2. Goto Volumes and choose the primary volume and create a snapshot
+   3. Goto snapshots and create an image out of the snapshot
+   4. Goto AMI console and launch an instance on a separate AZ using the AMI created
+
+Clear all the instances, snapshots, AMI created from Exercise1 and Exercise2
+
+
+## Exercise3: Create an encrypted Volume and create a snapshot either encrypted or unencrypted with a custom key
+
+   1. Create a new encrypted volume with a custom key, you will have to go to KMS Service to create a new key
+   2. Once the volument is created, create a new snapsnot
+
+Try create unencrypted or encrypted snapshots from it.
+
+
+## Exercise4: Creating and mounting EFS filesystem
+
+   1. Goto EFS Service and create an EFS file system
+   2. Create 2 EC2 instance on separate AZ
+   3. Use code the below and execute all the commands in the link below,
+      https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Amazon%20EFS/connect-to-efs-filesystem.sh
+Make sure you change the EFS id in the command.
+
+   4. Mounting EFS takes time, we need to goto default security group and add a rule in inbound rule to inclue NFS port exposed to sercurity group used to create ec2 instance
+   5. Try mounting it again and it will work
+
+Playaround with the EFS, create file from one instance and you should be able to find it in another one. 
 
