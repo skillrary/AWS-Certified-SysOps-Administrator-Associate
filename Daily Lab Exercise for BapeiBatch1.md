@@ -21,7 +21,7 @@ Table of contents
   * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
   * [Exercise 4: Create ASG](#exercise-4--create-asg)
   * [Exercise 5: Add scaling policy and cause scaling events](#exercise-5--add-scaling-policy-and-cause-scaling-events)
-- [Day 6:](#day-5)
+- [Day 6:](#day6)
   * [Exercise 1: Create an Application Load Balancer (ALB)](#exercise-1--create-an-application-load-balancer--alb)
   * [Exercise 2: Enable Path based Routing](#exercise-2--enable-path-based-routing)
   * [Exercise 3: Enable Sticky Sessions on ELB](#exercise-3--enable-sticky-sessions-on-elb)
@@ -293,9 +293,9 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    Make sure you delete all the instances and configurations created till now. 
 
 
-# Day6:
+# Day 6:
 
-## Exercise1: Creating and resizing Amazon EBS volumes
+## Exercise 1: Creating and resizing Amazon EBS volumes
 
    1. Launch a windows 2019 base free tier instance
    2. Create a new volume with IO1 volume type in the same AZ of the windows instance launched in step1
@@ -307,7 +307,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    8. Right Click on the disk and extend the partition
 
 
-## Exercise2: Create a snapshot and AMI
+## Exercise 2: Create a snapshot and AMI
 
    1. Shutdown the instance created in Exercise1, Step1. 
    2. Goto Volumes and choose the primary volume and create a snapshot
@@ -317,7 +317,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 Clear all the instances, snapshots, AMI created from Exercise1 and Exercise2
 
 
-## Exercise3: Create an encrypted Volume and create a snapshot either encrypted or unencrypted with a custom key
+## Exercise 3: Create an encrypted Volume and create a snapshot either encrypted or unencrypted with a custom key
 
    1. Create a new encrypted volume with a custom key, you will have to go to KMS Service to create a new key
    2. Once the volument is created, create a new snapsnot
@@ -325,7 +325,7 @@ Clear all the instances, snapshots, AMI created from Exercise1 and Exercise2
 Try create unencrypted or encrypted snapshots from it.
 
 
-## Exercise4: Creating and mounting EFS filesystem
+## Exercise 4: Creating and mounting EFS filesystem
 
    1. Goto EFS Service and create an EFS file system
    2. Create 2 EC2 instance on separate AZ
