@@ -275,7 +275,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
    1. Create a new ASG under Autoscaling Group Console
       a. Give it a name
-      b. Click on Create a launch template, as we do not have a launch template. 
+      b. Click on Create a launch template, as we do not have a launch template.  
       c. Enter all the details for Launch Template like Name, AMI, Instance Type, Select Key Pair, Security Group, Role with S3 access, and in advance details add User data details with the link below. 
       
            https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/user-data-to-create-index-html-with-names.sh 
