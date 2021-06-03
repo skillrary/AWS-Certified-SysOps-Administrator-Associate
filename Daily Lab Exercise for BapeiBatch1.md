@@ -32,7 +32,7 @@ Table of contents
   * [Exercise 3: Systems Manager Automation](#exercise-3-systems-manager-automation)
   * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
 
-# Day1:                                                [Back to TOC](#table-of-contents)
+# Day1:                                                
 [![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
    1. Create a Policy for SysOperations -- Used existing policy for SystemAdministration    
    2. Create a group for SysOps
@@ -46,7 +46,8 @@ Table of contents
       1. sudo su - -->Change the user to root
       2. shutdown --> use this command to shutdown from server
 
-# Day2  [Back to TOC](#table-of-contents)
+# Day2  
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 1. Change Instance Type from t2.micro to any instance and test
 2. Know where to choose/create Spot, Reserved, Dedicated hosts and Savings Plan. 
 3. Know where configure Dedicated host/instance
@@ -104,7 +105,8 @@ Table of contents
       
       
    
-# Day3  [Back to TOC](#table-of-contents)
+# Day3 
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 ## Exercise 1: Create Custom VPC and test Bastion Host and Nat Gateway
 
 1. Create a VPC with the configuration as per the link(github https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/EC2/custom-vpc.txt) provided
@@ -190,7 +192,8 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
     22  crontab -e
     23  crontab -l
 
-# Day 4:    [Back to TOC](#table-of-contents)
+# Day 4:  
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 
 ## Exercise 1: Create and invoke a serverless Lambda function using Amazon SNS
 
@@ -213,7 +216,8 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 
 
 
-# Day 5:    [Back to TOC](#table-of-contents)
+# Day 5:    
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 
 ## Exercise 1: Create an Application Load Balancer (ALB)
 
@@ -298,7 +302,8 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    Make sure you delete all the instances and configurations created till now. 
 
 
-# Day 6:    [Back to TOC](#table-of-contents)
+# Day 6:   
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 
 ## Exercise 1: Creating and resizing Amazon EBS volumes
 
@@ -344,7 +349,8 @@ Make sure you change the EFS id in the command.
 Playaround with the EFS, create file from one instance and you should be able to find it in another one. 
 
 
-# Day 7:    [Back to TOC](#table-of-contents)
+# Day 7:    
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 
 ## Exercise 1: Create Systme Manager Configuration
    1. Goto Systems Manager and Click on Quick Setup
