@@ -33,7 +33,7 @@ Table of contents
   * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
 
 # Day1:                                                
-[![TOC](https://img.shields.io/badge/TableofContent-green)](#table-of-contents)
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
    1. Create a Policy for SysOperations -- Used existing policy for SystemAdministration    
    2. Create a group for SysOps
    3. Create a User and assign the group
@@ -47,7 +47,7 @@ Table of contents
       2. shutdown --> use this command to shutdown from server
 
 # Day2  
-[![TOC](https://img.shields.io/badge/TableofContent-green)](#table-of-contents)
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 1. Change Instance Type from t2.micro to any instance and test
 2. Know where to choose/create Spot, Reserved, Dedicated hosts and Savings Plan. 
 3. Know where configure Dedicated host/instance
@@ -130,11 +130,11 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
 3. Goto Cloudwatch and see if it has created a new namespace 
 4. Now create a new EC2 instance and create mem.sh file with the following 2 lines.
 
-  
+  ```
       USEDMEMORY=$(free -m | awk 'NR==2{printf "%.2f\t", $3*100/$2 }')
 
       aws cloudwatch put-metric-data --metric-name memory-usage --dimensions Instance=i-0542ea1e32c310c93  --namespace "EC2-Mem" --value $USEDMEMORY
-
+```
 
 5. Save the file and create a crontab entry using the following command
       crontab -e
@@ -224,18 +224,20 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    1. Create an S3 bucket and upload all the files from the link below,
    https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/tree/main/Elastic%20Load%20Balancing%20and%20Auto%20Scaling/Website
    2. Create 2 ec2 instnace in differnt subnet and all the following user data,
-
-   #!/bin/bash
-   yum update -y
-   yum install httpd -y
-   systemctl start httpd
-   systemctl enable httpd
-   cd /var/www/html
-   aws s3 cp s3://skillrary-lab-bapei-elb/names.csv ./
-   aws s3 cp s3://skillrary-lab-bapei-elb/index.txt ./
-   EC2NAME=`cat ./names.csv|sort -R|head -n 1|xargs`
-   sed "s/INSTANCEID/$EC2NAME/" index.txt > index.html
-
+   
+```
+       #!/bin/bash
+       yum update -y
+       yum install httpd -y
+       systemctl start httpd
+       systemctl enable httpd
+       cd /var/www/html
+       aws s3 cp s3://skillrary-lab-bapei-elb/names.csv ./
+       aws s3 cp s3://skillrary-lab-bapei-elb/index.txt ./
+       EC2NAME=`cat ./names.csv|sort -R|head -n 1|xargs`
+       sed "s/INSTANCEID/$EC2NAME/" index.txt > index.html
+```  
+     
    make sure you assign S3Readonly role to each of these instances.
 
    3. Create a new LB configuration with a new Template Group
@@ -245,7 +247,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
 ## Exercise 2: Enable Path based Routing
 
    1. Create a new ec2 instance add the code below for user data section,
-
+```
    #!/bin/bash
    yum update -y
    yum install httpd -y
@@ -257,7 +259,7 @@ https://s3.amazonaws.com/amazoncloudwatch-agent/windows/amd64/latest/amazon-clou
    EC2NAME=`cat ./names.csv|sort -R|head -n 1|xargs`
    sed "s/INSTANCEID/$EC2NAME/" index.txt > index.html
    cp index.html orders.html
-
+```
    2. Create a new target group and add the ec2 instance created above
 
    3. Go to ELB configuration and edit the listener rule
