@@ -26,7 +26,11 @@ Table of contents
   * [Exercise 2: Create a snapshot and AMI](#exercise-2-create-a-snapshot-and-ami)
   * [Exercise 3: Create an encrypted Volume and create a snapshot either encrypted or unencrypted with a custom key](#exercise-3-create-an-encrypted-volume-and-create-a-snapshot-either-encrypted-or-unencrypted-with-a-custom-key)
   * [Exercise 4: Creating and mounting EFS filesystem](#exercise-4-creating-and-mounting-efs-filesystem)
-
+- [Day 7:](#day-7)   
+  * [Exercise 1: Create Systme Manager Configuration](#exercise-1-create-systme-manager-configuration)
+  * [Exercise 2: Create Tags and Resource Group](#exercise-2-create-tags-and-resource-group)
+  * [Exercise 3: Systems Manager Automation](#exercise-3-systems-manager-automation)
+  * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
 
 # Day1:
 
