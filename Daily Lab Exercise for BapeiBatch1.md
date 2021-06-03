@@ -32,7 +32,7 @@ Table of contents
   * [Exercise 3: Systems Manager Automation](#exercise-3-systems-manager-automation)
   * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
 
-# Day1:                                                        [Back to TOC](#table-of-contents)
+# Day1:                                                        ### [Back to TOC](#table-of-contents)
 
    1. Create a Policy for SysOperations -- Used existing policy for SystemAdministration
    2. Create a group for SysOps
