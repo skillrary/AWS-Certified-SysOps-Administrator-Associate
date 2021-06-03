@@ -339,3 +339,37 @@ Make sure you change the EFS id in the command.
 
 Playaround with the EFS, create file from one instance and you should be able to find it in another one. 
 
+
+# Day 7:
+
+## Exercise 1: Create Systme Manager Configuration
+   1. Goto Systems Manager and Click on Quick Setup
+   2. With the default setting create the configuration
+
+
+## Exercise 2: Create Tags and Resource Group
+   1. Create 2 Linux and 2 Windows instances
+   2. Add Name and Environment tag for each of these instance like DevLin01, ProdLin02, DevWin01, ProdWin01
+   3. Create a new role and add a policy for SSM (AmazonEC2RoleforSSM)
+   4. Attach the role to all 4 EC2 servers created. (You can first create the role and assign the same while creating the instances)
+   5. Come back to Systems Manager console and goto Fleet Manager to see the instances being managed. (This may take around 30mins to appear)
+
+
+## Exercise 3: Systems Manager Automation
+   1. Goto Documents sections in Systems Manager(Last option in the Menu item)
+   2. Search for AWS Stop ec2 instnace document and execute, while selecting instance select only one and finish the activity
+   3. Goto EC2 console and see if this instance is stopped
+   4. Come back to Documents and search for EC2 start instance document and execute the same to see if the instance starts up
+
+
+## Exercise 4: System Manager Run Command
+   1. Goto Run Command under System Manager
+   2. Click on Run command and choose AWS-FindWindowsUpdates command, choose update level to all
+   3. For Specify instance tag, specify production environment
+   4. Configure Rate control to 4
+   5. Deselect write to S3 bucket as we do not need this option
+   6. Go ahead and execute
+     Observe that Linux Ec2 has failed and wait for the command to complete. 
+   7. Come back to run command once the previous command is done
+   8. Select AWS-InstallMissingWindowsUpdates command and execute it on Production environment. Make sure to select all the options which were selected in the previous command run.
+     Observe new patch application.  
