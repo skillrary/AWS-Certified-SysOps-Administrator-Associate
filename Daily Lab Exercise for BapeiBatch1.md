@@ -33,7 +33,7 @@ Table of contents
   * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
 
 # Day1:                                                
-[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
+[![TOC](https://img.shields.io/badge/TableofContent-green)](#table-of-contents)
    1. Create a Policy for SysOperations -- Used existing policy for SystemAdministration    
    2. Create a group for SysOps
    3. Create a User and assign the group
@@ -47,7 +47,7 @@ Table of contents
       2. shutdown --> use this command to shutdown from server
 
 # Day2  
-[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
+[![TOC](https://img.shields.io/badge/TableofContent-green)](#table-of-contents)
 1. Change Instance Type from t2.micro to any instance and test
 2. Know where to choose/create Spot, Reserved, Dedicated hosts and Savings Plan. 
 3. Know where configure Dedicated host/instance
