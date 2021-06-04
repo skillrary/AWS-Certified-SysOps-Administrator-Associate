@@ -388,3 +388,62 @@ Playaround with the EFS, create file from one instance and you should be able to
    7. Come back to run command once the previous command is done
    8. Select AWS-InstallMissingWindowsUpdates command and execute it on Production environment. Make sure to select all the options which were selected in the previous command run.
      Observe new patch application.  
+     
+     
+# Day 8: 
+
+## Exercise 1: Configure Patching in Systems Manager
+1. Goto Patch Manager under Systems Manager console
+2. Click on Configure Patching, Add Environment Tag to Development, Choose option for patching schedule as "Schedule in a new Maintenance Window", Choose the frequency to be "Every 12 hours" and give it a name under "Maintenance Window Name" and then click on Configure Patching.
+
+This will configure patching to be scanned and install every 12 hours.
+
+
+## Exercise 2: Configure Custom Compliance Rule
+1. Use the github link below and copy the code (Make sure you modify the instance ID in the command, choose the one which is already compliant so that you can see the status later to be under non compliant resource)
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Systems%20Manager/aws-ssm-put-compliance-items.sh
+2. Execute the command from command prompt
+3. Verify the compliance of the Instance ID. 
+
+
+## Exercise 3: Use Secure Shell
+1. Goto Session Manager under Systems Manager console
+2. Click on Configure Preferences
+3. Choose/Select S3 Bucket and Cloudwatch logs option
+4. Choose an exisiting S3 bucket to save the logs
+5. Goto log group under Cloudwatch service and create a new log group. Its very simple, just add a name to log group and save.
+6. Use the log group created under Cloudwatch service and enter the same name for log group and click on save
+7. Now goto Session tab under Session Manager, choose one of the instnace and click on Start Session. Once the session is started enter some command and terminate the session.
+8. Follow the same on another instance
+9. Now go to CloudWatch Server log group which was created in step 5 and verify if the entries of all the commands executed is available
+10. Goto S3 and verify the logs stored for all the commands executed 
+
+## Exercise 4: Create Parameters using Parameter Store
+1. Goto Parameter Store underSystems Manager console
+2. Click on Create Parameter, add the name /rds/db1, Type as String, Data Type as text, Value as some custom entry you want(ex: db-connectionstring01) and finish creating the parameter.
+3. Similarly create /rds/db2 parameter and create an encrypted parameter
+4. Use the link below to for the commands to be executed from the command prompt
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Systems%20Manager/aws-ssm-commands.sh
+
+
+## Exercise 5: Use Lambda Function to retrieve data from Parameter store
+1. Create a new Lambda Function, Name it and use Python 1.7 or 1.8 whichever is latest. Code works fine with all versions. 
+2. Change the code to the one in the link below and deploy.
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Systems%20Manager/lambda-ssm.py
+Make sure you change the regionname and parameter store name changed accordingly.
+3. Create a test with hello world and even name to T1 or anything custom and click on Test. This will throw an exception as there is no permission for Lambda to access the parameter store. 
+4. Click on Permission for Lambda, click on the Role used. Once the role is open click on inline permissions and choose read permission with GetParameter, GetParameters, GetParameterByPath and then save it. 
+5. Test it again and we should be able to see the results. 
+6. Make modifications to the program and change parameter store and access etc and see if it works. (Try it with encrypted, other db2 parameter etc.)
+
+
+## Exercise 6: Create a ElasticBeanstalk Enviromment. 
+1. Create a New Application give it a name. Choose Node.js platform with single node. Upload the code from the link below. 
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-red.zip
+2. Create and test the application.
+3. Now deploy a new version of the application with the link below,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-error.zip
+4. This will show a failed application, go back and check the logs to find the actual error.
+5. Now deploy a new application with the link below,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-appv1.zip
+6. See that the application works now
