@@ -32,12 +32,12 @@ Table of contents
   * [Exercise 3: Systems Manager Automation](#exercise-3-systems-manager-automation)
   * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
 - [Day 8:](#day-8)   
-  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-create-systme-manager-configuration)
-  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-create-tags-and-resource-group)
-  * [Exercise 3: Use Secure Shell](#exercise-3-systems-manager-automation)
-  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-system-manager-run-command)
-  * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-3-systems-manager-automation)
-  * [Exercise 6: Create a ElasticBeanstalk Enviromment](#exercise-4-system-manager-run-command)
+  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-configure-patching-in-systems-manager)
+  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-configure-custom-compliance-rule)
+  * [Exercise 3: Use Secure Shell](#exercise-3-use-secure-shell)
+  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
+  * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-5-use-lambda-function-to-retrieve-data-from-parameter-store)
+  * [Exercise 6: Create a ElasticBeanstalk Enviromment](#exercise-6-create-a-elasticbeanstalk-enviromment)
   
   
 # Day1:                                                
