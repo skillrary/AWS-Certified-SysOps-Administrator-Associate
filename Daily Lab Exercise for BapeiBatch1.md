@@ -31,7 +31,15 @@ Table of contents
   * [Exercise 2: Create Tags and Resource Group](#exercise-2-create-tags-and-resource-group)
   * [Exercise 3: Systems Manager Automation](#exercise-3-systems-manager-automation)
   * [Exercise 4: System Manager Run Command](#exercise-4-system-manager-run-command)
-
+- [Day 8:](#day-8)   
+  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-create-systme-manager-configuration)
+  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-create-tags-and-resource-group)
+  * [Exercise 3: Use Secure Shell](#exercise-3-systems-manager-automation)
+  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-system-manager-run-command)
+  * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-3-systems-manager-automation)
+  * [Exercise 6: Create a ElasticBeanstalk Enviromment](#exercise-4-system-manager-run-command)
+  
+  
 # Day1:                                                
 [![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
    1. Create a Policy for SysOperations -- Used existing policy for SystemAdministration    
@@ -391,6 +399,7 @@ Playaround with the EFS, create file from one instance and you should be able to
      
      
 # Day 8: 
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 
 ## Exercise 1: Configure Patching in Systems Manager
 1. Goto Patch Manager under Systems Manager console
