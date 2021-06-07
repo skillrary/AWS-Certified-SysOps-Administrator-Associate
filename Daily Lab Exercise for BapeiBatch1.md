@@ -38,11 +38,11 @@ Table of contents
   * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
   * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-5-use-lambda-function-to-retrieve-data-from-parameter-store)
   * [Exercise 6: Create a ElasticBeanstalk Enviromment](#exercise-6-create-a-elasticbeanstalk-enviromment)
-  - [Day 9:](#day-9)   
-  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-configure-patching-in-systems-manager)
-  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-configure-custom-compliance-rule)
-  * [Exercise 3: Use Secure Shell](#exercise-3-use-secure-shell)
-  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
+- [Day 9:](#day-9)   
+  * [Exercise 1: Beanstalk Swap URL's](#exercise-1-beanstalk-swap-urls)
+  * [Exercies 2: Add a custom domain name for Beanstalk application](#exercies-2-add-a-custom-domain-name-for-beanstalk-application)
+  * [Exercise 3: Create Worker tier](#exercise-3-create-worker-tier)
+  * [Exercise 4: Created a Multie Tier HA application](#exercise-4-created-a-multie-tier-ha-application)
   
 # Day1:                                                
 [![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
@@ -463,6 +463,7 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
 
 
 # Day 9:
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
 
 ## Exercise 1: Beanstalk Swap URL's
 1. Create a new Environment under the same appname created in previous exercise
