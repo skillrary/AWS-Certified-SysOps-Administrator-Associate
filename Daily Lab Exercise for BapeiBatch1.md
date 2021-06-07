@@ -38,7 +38,11 @@ Table of contents
   * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
   * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-5-use-lambda-function-to-retrieve-data-from-parameter-store)
   * [Exercise 6: Create a ElasticBeanstalk Enviromment](#exercise-6-create-a-elasticbeanstalk-enviromment)
-  
+  - [Day 9:](#day-9)   
+  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-configure-patching-in-systems-manager)
+  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-configure-custom-compliance-rule)
+  * [Exercise 3: Use Secure Shell](#exercise-3-use-secure-shell)
+  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
   
 # Day1:                                                
 [![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
@@ -456,3 +460,42 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
 5. Now deploy a new application with the link below,
 https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-appv1.zip
 6. See that the application works now
+
+
+# Day 9:
+
+## Exercise 1: Beanstalk Swap URL's
+1. Create a new Environment under the same appname created in previous exercise
+2. Upload the code with version2 with green page. Use the code from the link,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-appv2.zip
+3. Go to v1 application and click on Action and click on Swap Urls and choose the dev or v2 application and save
+4. This should change or swap the urls
+
+
+## Exercies 2: Add a custom domain name for Beanstalk application
+1. Goto Route53 home page
+2. Create a DNS or purchase a new domain
+3. Once we have the domain, choose the domain and create a A record (Simple record)
+4. Here you have 2 options one directly go with the domain or add a subdomain, in our session we added a sub domain as our actual domain is already used
+5. You can either choose to apply ip address or choose an application url 
+6. Choose Alias and under Route traffic to, choose your Beanstalk application url
+7. Save it and use your custom url to access the application
+
+
+## Exercise 3: Create Worker tier
+1. Create a new application in Beanstalk, choose worker tier instead of webtier
+2. Use the sample application provided by AWS
+3. Goto SQS to check on the queues created
+
+Make sure you terminate all the environements created
+
+
+## Exercise 4: Created a Multie Tier HA application
+
+1. Create a new Beanstalk application, choose V2 version of our application from the url below,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-appv2.zip
+2. Choose advance configuration or configure more option, choose the preset "High Availability" from the list
+3. Change the Autoscaling min to 2, go through all the options of Load Balancer, Monitoring and enable stream health events to cloudwatch
+4. Save it and create the application, wait for it and once ready access the application using the url 
+5. Verify and check EC2 instances, ASG and LB
+
