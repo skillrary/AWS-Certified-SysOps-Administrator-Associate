@@ -44,12 +44,12 @@ Table of contents
   * [Exercise 3: Create Worker tier](#exercise-3-create-worker-tier)
   * [Exercise 4: Created a Multie Tier HA application](#exercise-4-created-a-multie-tier-ha-application)
 - [Day 10:](#day-10)   
-  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-configure-patching-in-systems-manager)
-  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-configure-custom-compliance-rule)
-  * [Exercise 3: Use Secure Shell](#exercise-3-use-secure-shell)
-  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
-  * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-5-use-lambda-function-to-retrieve-data-from-parameter-store)  
-
+  * [Exercise 1: Create and Update Stacks](#exercise-1-create-and-update-stacks)
+  * [Exercise 2: Mapping and Parameters](#exercise-2-mapping-and-parameters)
+  * [Exercise 3: Create stack with parameters](#exercise-3-create-stack-with-parameters)
+  * [Exercise 4: Change sets and Drift Detection](#exercise-4-change-sets-and-drift-detection)
+  * [Exercise 5: Create Stack with user data](#exercise-5-create-stack-with-user-data)  
+  * [Exercise 6: Rollback and Stack creation failures](#exercise-6-rollback-and-stack-creation-failures)
 
 # Day1:                                                
 [![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
