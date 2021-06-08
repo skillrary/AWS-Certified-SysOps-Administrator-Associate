@@ -43,7 +43,14 @@ Table of contents
   * [Exercies 2: Add a custom domain name for Beanstalk application](#exercies-2-add-a-custom-domain-name-for-beanstalk-application)
   * [Exercise 3: Create Worker tier](#exercise-3-create-worker-tier)
   * [Exercise 4: Created a Multie Tier HA application](#exercise-4-created-a-multie-tier-ha-application)
-  
+- [Day 10:](#day-10)   
+  * [Exercise 1: Configure Patching in Systems Manager](#exercise-1-configure-patching-in-systems-manager)
+  * [Exercise 2: Configure Custom Compliance Rule](#exercise-2-configure-custom-compliance-rule)
+  * [Exercise 3: Use Secure Shell](#exercise-3-use-secure-shell)
+  * [Exercise 4: Create Parameters using Parameter Store](#exercise-4-create-parameters-using-parameter-store)
+  * [Exercise 5: Use Lambda Function to retrieve data from Parameter store](#exercise-5-use-lambda-function-to-retrieve-data-from-parameter-store)  
+
+
 # Day1:                                                
 [![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
    1. Create a Policy for SysOperations -- Used existing policy for SystemAdministration    
@@ -492,7 +499,6 @@ Make sure you terminate all the environements created
 
 
 ## Exercise 4: Created a Multie Tier HA application
-
 1. Create a new Beanstalk application, choose V2 version of our application from the url below,
 https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/Elastic%20Beanstalk/nodejs-appv2.zip
 2. Choose advance configuration or configure more option, choose the preset "High Availability" from the list
@@ -500,3 +506,52 @@ https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/m
 4. Save it and create the application, wait for it and once ready access the application using the url 
 5. Verify and check EC2 instances, ASG and LB
 
+# Day 10:
+[![TOC](https://img.shields.io/badge/TOC-TableofContent-green)](#table-of-contents)
+
+## Exercise 1: Create and Update Stacks
+1. Goto CloudFormation and Create a Stack, choose Use a template and use the following file and upload the same
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/1%20EC2Instance.yml
+2. Move to next, skip or leave all as default and create the stack
+3. Look at all Events, Resource and verify if EC2 has started
+4. Now come back to the stack that was created and click on Update to update your current stack
+5. Use the following link for the file and upload the same and modify the stack
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/2%20EC2InstanceIP.yml
+6. Verify the resources 
+7. Delete the stack created
+
+## Exercise 2: Mapping and Parameters
+1. Use the following file to create a new stack with Mappings and Parameters on us-east-1 region,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/3%20EC2InstanceMappings.yml
+2. Create the stack and verify the resources and repeat the same on second region(us-west-1)
+3. Check the difference between both the stacks 
+
+## Exercise 3: Create stack with parameters
+1. Use the link below to create a new stack and call it Mystack2
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/4%20EC2InstanceParameters.yml
+2. Verify the LOV which you see for dev and prod instance
+3. Make sure that you follow step1 and step2 on us-east-1 and us-west-1
+
+
+Make sure you delete all the stack from Exercise 2 and 3 
+
+## Exercise 4: Change sets and Drift Detection
+1. Create a new stack using the file below,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/1%20EC2Instance.yml
+2. Now update the stack using the link below, make sure you click on create change set from actions menu of the stack
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/5%20EC2InstanceIPandSG.yml
+Continue to create the stack and see the changes before you execute the change
+3. Now go to EC2 and change the security group of the instance created. Once changed come back to stack configuration and click on Drift Detection under Actions. 
+4. Click on View Drift details and verify if it shows up the security group change
+
+## Exercise 5: Create Stack with user data
+1. Use the link below to create a stack,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/1%20EC2Instance.yml
+2. Verify if the website is available on port 80
+
+## Exercise 6: Rollback and Stack creation failures
+1. Create a new stack with the link below, 
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/1%20EC2Instance.yml
+2. Now update the stack using the link below but make sure you enter wrong email in the link below,
+https://github.com/skillrary/AWS-Certified-SysOps-Administrator-Associate/blob/main/CloudFormation/2%20EC2InstanceIP.yml
+3. You should be able to see that the udpate rollback fails and to fix this you can actually modify the wrong ami id and upload and you should be able to correct the failure
