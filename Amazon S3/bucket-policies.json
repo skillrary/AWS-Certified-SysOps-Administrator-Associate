@@ -7,7 +7,7 @@
         "Sid":"AllowPaulAllActionsonBucket",
         "Effect":"Allow",
         "Principal": {
-			"AWS": "arn:aws:iam::618148227241:user/Mithun"
+			"AWS": "arn:aws:iam::618148227241:user/MA"
 		},
         "Action":["s3:*"],
         "Resource":["arn:aws:s3:::my-test-sr-bucket/*"]
