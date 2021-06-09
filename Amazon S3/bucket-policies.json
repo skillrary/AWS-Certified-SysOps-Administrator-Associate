@@ -1,4 +1,4 @@
-#1 Grant Paul all actions on bucket objects (use with identity policy #3)
+#1 Grant MA all actions on bucket objects (use with identity policy #3)
 
 {
     "Version":"2012-10-17",
