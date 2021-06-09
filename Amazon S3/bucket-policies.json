@@ -7,10 +7,10 @@
         "Sid":"AllowPaulAllActionsonBucket",
         "Effect":"Allow",
         "Principal": {
-			"AWS": "arn:aws:iam::515148227241:user/Paul"
+			"AWS": "arn:aws:iam::618148227241:user/Mithun"
 		},
         "Action":["s3:*"],
-        "Resource":["arn:aws:s3:::my-test-dct-bucket/*"]
+        "Resource":["arn:aws:s3:::my-test-sr-bucket/*"]
       }
     ]
   }
@@ -27,8 +27,8 @@
         "Principal": "*",
         "Action": "s3:*",
         "Resource": [
-       "arn:aws:s3:::my-test-dct-bucket1",
-           "arn:aws:s3:::my-test-dct-bucket1/*"
+       "arn:aws:s3:::my-test-sr-bucket1",
+           "arn:aws:s3:::my-test-sr-bucket1/*"
         ],
         "Condition": {
        "NotIpAddress": {"aws:SourceIp": "10.10.10.10./32"}
